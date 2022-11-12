@@ -37,7 +37,7 @@ class UserDAO:
         self.session.commit()
         return user
 
-    def update_user(self, data, user_data: dict):
+    def update_user(self, user_data: dict):
         """
             Обновление пользователя
         """
@@ -46,10 +46,3 @@ class UserDAO:
         self.session.commit()
         return self.get_user_by_email(email)
 
-    def delete_user(self, username):
-        """
-            Удаление пользователя
-        """
-        user = self.get_user_by_id(username)
-        self.session.delete(user)
-        self.session.commit()

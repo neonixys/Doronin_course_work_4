@@ -4,7 +4,6 @@ from flask_restx import Resource, Namespace
 
 # Импорт схемы Director
 from dao.model.director import DirectorSchema
-from decorators import auth_required, admin_required
 # Импорт экземпляра класса DirectorService
 from implemented import director_service
 
